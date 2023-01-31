@@ -78,19 +78,19 @@ public class CardTrick {
         System.out.println("Congratulations, you guessed right!");
         System.out.println();
         
-        System.out.println("My name is Paul, but you can call me prof, Paul or sir");
+        System.out.println("My name is Adrian, please just call me Adrian");
         System.out.println();
         
         System.out.println("My career ambitions:");
-        System.out.println("-- Be more active on LinkedIn");
-        System.out.println("-- Have a semester with no violations of academic integrity!");
+        System.out.println("-- Pass all my classes");
+        System.out.println("-- Learn many new things this semester and work on my own projects before the next year!");
 	System.out.println();	
 
         System.out.println("My hobbies:");
-        System.out.println("-- Investing");
-        System.out.println("-- Cooking");
-        System.out.println("-- Reading/Watching TV");
-        System.out.println("-- Riding my motorcycle");
+        System.out.println("-- Tabletop Role Playing Games (Think Dungeons and Dragons)");
+        System.out.println("-- Video Games");
+        System.out.println("-- Writing");
+        System.out.println("-- Board Games");
 
         System.out.println();
         
