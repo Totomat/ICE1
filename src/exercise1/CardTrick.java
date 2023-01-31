@@ -1,5 +1,8 @@
 package exercise1;
 
+import java.util.Random;
+import java.util.Scanner;
+
 /**
  * A class that fills a hand of 7 cards with random Card Objects and then asks the user to pick a card.
  * It then searches the array of cards for the match to the user's card. 
@@ -10,12 +13,42 @@ package exercise1;
  */
 public class CardTrick {
     
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         
         Card[] hand = new Card[7];
-
+        Random random = new Random();
+        Scanner input = new Scanner(System.in);
+        
         for (int i = 0; i < hand.length; i++) {
             Card card = new Card();
+            card.setValue(random.nextInt(13) + 1);
+            card.setSuit(Card.SUITS[random.nextInt(4)]);
+            hand[i] = card;
+        }
+        
+        System.out.print("Pick any card: ");
+        int value = input.nextInt();
+        System.out.print("Pick the suit of the card: ");
+        int suit = input.nextInt();
+        
+        Card userCard = new Card();
+        userCard.setValue(value);
+        userCard.setSuit(Card.SUITS[suit - 1]);
+        
+        boolean found = false;
+        for (int i = 0; i < hand.length; i++) {
+            if (hand[i].equals(userCard)) {
+                found = true;
+                break;
+            }
+        }
+        
+        if (found) {
+            printInfo();
+        } else {
+            System.out.println("Sorry your card was not found in the hand.");
+        }
+    
             //card.setValue(insert call to random number generator here)
             // 
             //card.setSuit(Card.SUITS[insert call to random number between 0-3 here])
@@ -33,7 +66,7 @@ public class CardTrick {
         
         // If the guess is successful, invoke the printInfo() method below.
         
-    }
+    
 
     /**
      * A simple method to print out personal information. Follow the instructions to 
